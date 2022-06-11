@@ -25,8 +25,7 @@ count = 1 # A global iterator to track each day past current datetime
 for day in forecast_list:
     current_date = int(today[4:6]) + count
     this_day = f"{today[0:4]}{current_date}{today[6:]}"
-    print(this_day)
-    count+=1
+    count+=1 if current_date <= 31 else 1
 
 # 'forecast': [   {'day': 1, 'temperature': '+22 C', 'wind': '12 km/h'},
 #                     {'day': 2, 'temperature': ' C', 'wind': '14 km/h'},
